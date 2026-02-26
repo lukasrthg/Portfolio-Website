@@ -9,7 +9,7 @@ function Projects() {
 
 
   useEffect(() => {
-    fetch("https://api.github.com/users/GITHUBUSERNAME/repos")
+    fetch("https://api.github.com/users/lukasrthg/repos")
       .then((res) => res.json())
       .then((data) =>
         setRepos(
@@ -34,7 +34,7 @@ function Projects() {
       <div className="page-content">
         <h1>Projects</h1>
         <div className="projects-grid">
-          {repos.map((project, index) => (
+          {repos.map((repo, index) => (
             <motion.div
               key={repo.id}
               initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100, scale: 0.9 }}
@@ -48,16 +48,15 @@ function Projects() {
             >
               <ProjectCard
                 project={{
-                  title: project.name,
-                  description: project.description,
-                  link: project.html_url,
-                  stars: project.stargazers_count,
-                  language: project.language,
+                  title: repo.name,
+                  description: repo.description,
+                  link: repo.html_url,
+                  stars: repo.stargazers_count,
+                  language: repo.language,
                 }}
               />
             </motion.div>
-          ))
-}
+          ))}
         </div>
       </div>
     </motion.div>
