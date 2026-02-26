@@ -1,0 +1,163 @@
+/* ------------------------
+   Global / Base Styles
+------------------------- */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9fafb;
+  color: #111827;
+}
+
+.page {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  
+  text-align: center;
+  display: flex; flex-direction:column; align-items:center;
+}
+
+
+.page-content { 
+  max-width: 1000px; /* 1. Don't let the content get wider than 1000px */ 
+  width: 100%; /* 2. On small screens (phones), take up the whole width */ 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; /* 3. Ensures images/buttons inside this div are centered */ 
+}
+
+/* ------------------------
+   Navbar
+------------------------- */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 30px;
+  background: #111827;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.nav-link.active {
+  color: #facc15; /* highlight active page */
+}
+
+/* ------------------------
+   Home Page
+------------------------- */
+.home-page .hero {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.hero-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2563eb;
+}
+
+.hero-text h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #111827;
+}
+
+.hero-text p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* ------------------------
+   About Page
+------------------------- */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f0f0f0;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.skill-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+/* ------------------------
+   Projects Page
+------------------------- */
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 20px;
+}
+
+.project-card {
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #111;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* ------------------------
+   Contact Page
+------------------------- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #1e40af;
+}
