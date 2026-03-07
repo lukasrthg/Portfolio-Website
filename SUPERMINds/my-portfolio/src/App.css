@@ -124,8 +124,8 @@ body {
 
 .project-card {
   background: #f0f0f0;
-  padding: 20px;
-  border-radius: 12px;
+  padding: 10px 20px;
+  border-radius: 15px;
   text-decoration: none;
   color: #111;
   transition: transform 0.3s, box-shadow 0.3s;
